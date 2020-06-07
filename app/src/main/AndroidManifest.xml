@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.e.womansafety">
+<uses-permission android:name="android.permission.SEND_SMS"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<application android:allowBackup="true" android:icon="@drawable/girl" android:label="WomenSafety" android:roundIcon="@drawable/girl" android:supportsRtl="true" android:theme="@style/AppTheme">
+<activity android:name=".Information"/>
+<service android:name=".MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT"/>
+</intent-filter>
+</service>
+<activity android:name=".NotificationActivity">
+<intent-filter>
+<action android:name="SOMEACTIVITY"/>
+<category android:name="android.intent.category.DEFAULT"/>
+</intent-filter>
+</activity>
+<receiver android:name=".MyLocationService"/>
+<activity android:name=".Homeone"/>
+<activity android:name=".AddPhone"/>
+<activity android:name=".Menuone"/>
+<activity android:name=".Registerone"/>
+<activity android:name=".Loginone"/>
+<activity android:name=".Startone"/>
+<activity android:name=".MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN"/>
+<category android:name="android.intent.category.LAUNCHER"/>
+</intent-filter>
+</activity>
+</application>
+</manifest>
